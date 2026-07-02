@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material Settings Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <div>
+            <h1>DT Material Presets Editor</h1>
+            <hr>
+            <p>v1.0.0 - Experimental (Can break)</p>
+          </div>
+        </div>
+        <div class="fileline">
+          <span class="filename" id="filenameLabel">no preset loaded</span>
+          <input type="file" id="fileInput" accept=".json,application/json" style="display: none" />
+          <button class="ghost" id="loadBtn">Load Preset</button>
+          <button class="primary" id="exportBtn" disabled>Export Preset</button>
+        </div>
+      </header>
+
+      <div id="dropzone" class="show">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9a9fa8" stroke-width="1.5">
+          <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+        </svg>
+        <h2>Drop the materials_preset.json file here</h2>
+        <br>
+        <button class="primary" id="dropBrowseBtn">Choose file</button>
+      </div>
+
+      <div class="toolbar" id="toolbar">
+        <div class="left">
+          <span class="stat"><b id="matCount">0</b> materials</span>
+          <span class="stat"><b id="catCount">0</b> categories</span>
+          <input class="search" id="searchInput" placeholder="Filter by name or category…" />
+        </div>
+        <button class="ghost" id="newFileBtn">Start new file</button>
+      </div>
+
+      <div id="board"></div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
