@@ -53,7 +53,7 @@
                 dropzone.classList.remove("show");
                 toolbar.classList.add("show");
                 board.classList.add("show");
-                hintFooter.style.display = "block";
+                //hintFooter.style.display = "block";
                 render();
                 showToast("Loaded " + materials.length + " materials");
             } catch (err) {
@@ -72,7 +72,7 @@
         dropzone.classList.remove("show");
         toolbar.classList.add("show");
         board.classList.add("show");
-        hintFooter.style.display = "block";
+        //hintFooter.style.display = "block";
         render();
         addCategory("New Category");
     }
